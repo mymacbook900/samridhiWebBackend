@@ -8,6 +8,8 @@ import cart from "./src/routes/cart.route.js"
 import order from "./src/routes/order.route.js"
 import complaint from "./src/routes/complaint.route.js";
 import contactRoutes from "./src/routes/contact.router.js"
+import Ourteam from "./src/routes/ourteam.route.js"
+import Journy from "./src/routes/journy.router.js"
 
 const app = express();
 
@@ -17,16 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: [
-      "*",
       "http://localhost:3000",
-      "http://localhost:5173", 
-      "http://localhost:8081", 
-      "samriddhiwebsite-9kz6.vercel.app",
-      process.env.VITE_ADMIN_BASE_URL
+      "http://localhost:5173",
+      "http://localhost:8081",
+      "https://samriddhiwebsite-9kz6.vercel.app"
     ],
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
 
@@ -38,6 +36,8 @@ app.use('/api/cart', cart );
 app.use("/api/order", order);
 app.use("/api/complaint", complaint);
 app.use("/api/contact", contactRoutes);
+app.use("/api/ourteam",Ourteam)
+app.use("/api/journy",Journy)
 
 
 app.use((err, req, res, next) => {

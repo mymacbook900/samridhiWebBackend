@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const cartItemSchema = new mongoose.Schema({
   productId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Product", // References your Product Schema
+    ref: "Product", 
     required: true
   },
   quantity: {
@@ -14,11 +14,11 @@ const cartItemSchema = new mongoose.Schema({
   },
   unitPrice: {
     type: Number,
-    required: true // Stores the single unit price (e.g. 500)
+    required: true 
   },
   subTotal: { 
     type: Number, 
-    required: true // Stores quantity * unitPrice (e.g. 2 * 500 = 1000)
+    required: true 
   }
 });
 

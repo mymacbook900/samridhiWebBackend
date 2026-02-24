@@ -13,7 +13,7 @@ router.post(
     { name: "labReports", maxCount: 2 },
 
     { name: "insectImages", maxCount: 10 },
-    { name: "fungisideImages", maxCount: 10 },
+    { name: "fungisideImages", maxCount: 10 }, 
     { name: "weedImages", maxCount: 10 }, 
   ]),
   createProduct
