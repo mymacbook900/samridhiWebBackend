@@ -22,7 +22,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:5173",
       "http://localhost:8081",
-      "https://samriddhiwebsite-9kz6.vercel.app"
+      process.env.VITE_ADMIN_BASE_URL
     ],
     credentials: true,
   })
